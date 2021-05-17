@@ -1,0 +1,468 @@
+
+.wrapper{
+    max-width: 2600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/**********main header***************/
+.header{
+    position: absolute;
+    z-index: 2;
+}
+.logo p{
+    color: #dadde2aa;
+    font-family: "Baloo Da 2";
+    /*font-family: "Josefin Slab";*/
+    letter-spacing: 3px;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
+.nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #dadde2aa;
+    font-family: "Baloo Da 2";
+    letter-spacing: 2px;
+}
+.nav a:hover,.nav a:visited{
+    color: #dadde2aa;
+    margin-top: 10px;
+}
+/********** end of main header ***************/
+/********** hamburger popup menu icon ********/
+.hamburger_menu{
+    width: 30px;
+    height: 30px;
+    top: 18px;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-evenly;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    transition: right 1s ;
+    z-index: 101;
+}
+.hamburger_menu span{
+    position: absolute;
+    color: #043946;
+    background-color: #9ba3b0;
+    top: 0px;
+    left: 50px;
+    padding: 5px 10px;
+    opacity: 0;
+    visibility:hidden;
+    transition: opacity 1s; 
+}
+.hamburger_menu span::before{
+    content: "";
+    position: absolute;
+    border-top: 10px solid #9ba3b0;
+    border-right: 10px solid #9ba3b0;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: -8px;
+    top: 7px;
+    transform: rotate(-135deg);
+}
+.show_sidebar .hamburger_menu:hover span{
+    opacity: 1;
+    visibility: visible; 
+}
+.show_sidebar .hamburger_menu{
+    right: 350px;  
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #dadde2aa;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) ;
+}
+.show_sidebar .line1{
+    transform: rotate(45deg) translate(6px,6px);
+}
+.show_sidebar .line2{
+    visibility: hidden;
+}
+.show_sidebar .line3{
+    transform: rotate(-45deg)translate(6px,-5px);     
+}
+/*--------- end hamburger popup menu icon ----------*/
+
+/********** menu_sidebar popup***************/
+.menu_sidebar{
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    background-color: #043946de;
+    z-index: 100;
+    right: -400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: right 1s;
+}
+@media(max-width: 415px){
+    .menu_sidebar{
+        width: 100%;
+        right: 100%;
+    }
+    .show_sidebar .hamburger_menu{
+        right: 80%;   
+    }
+}
+.show_sidebar .menu_sidebar{
+    right: 0px;
+}
+.menu{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+}
+.menu_link{
+    font-family: 'Baloo Da 2';
+    font-size: 40px;
+    color: #dadde2aa;
+    position: relative;
+    text-decoration: none;
+}
+.menu_link::before{
+    content: attr(data-content);
+    position: absolute;
+    top: 4px;
+    left: 0;
+    color: rgb(194, 146, 41);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.8s;
+    transition-timing-function: ease-in-out;
+}
+.menu_link:hover::before{
+   
+   width: 100%; 
+}
+.menu_link:hover,.menu_link:visited{
+    color: #dadde2aa;
+}
+.social_sidebar{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.social_sidebar i{
+    font: 22px;
+    margin: 30px;
+    width: 40px;
+    height: 40px;
+    color: #dadde2aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: background-color 0.5s;
+}
+.social_sidebar i:hover{
+    background-color:  rgb(194, 146, 41);
+ 
+ }
+/*---------- end menu_sidebar popup----------*/
+
+/********** hero section ********************/
+.hero{
+    background-image:url(./imgs/hero_coffe1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.hero::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;  
+}
+.hero_content{
+    position: absolute;
+    color: #dadde2aa;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    padding: 0;
+    animation: hero_an 2s forwards ease-out ;
+    
+}
+@keyframes hero_an{
+    0%{transform: rotate(-45deg) scale(0.8);opacity: 0;}
+    
+    100%{transform: scale(1);opacity: 1;}
+}
+.hero_logo{
+    width: 256px;
+}
+.hero h1{
+    font-weight: bold; 
+    letter-spacing: 2px;  
+}
+.hero p{
+    font-family: "Baloo Da 2";
+    letter-spacing: 1px;
+}
+.hero_content img{
+    opacity: 0.7;   
+}
+.arrow_down_wrapper{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #dadde2aa;
+    top: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    cursor: pointer;   
+}
+.arrow_down{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-75%) rotate(-45deg);
+    border-bottom: 2px solid #dadde2aa;
+    border-left: 2px solid #dadde2aa;
+}
+/*--------- end hero section ---------*/
+
+/********** about section ****************/
+.about_us header{
+    background-color: #ebe7de;
+    padding-bottom:100px ;
+}
+.about_heading{
+    margin-top: 100px;
+}
+.about_us h2,.about_icon{
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.about_heading p{
+    font-family: "Baloo Da 2";
+    letter-spacing: 1px;
+    text-shadow:  0 1px 1px rgba(0, 0, 0, 0.2);   
+}
+.about_us i{
+    color: cadetblue;
+    font-size: 20px;
+}
+.about_icon{
+    margin-top: 100px;
+}
+.about_down_section p{
+    width: 70%;
+    font-family: "Baloo Da 2";
+    letter-spacing: 1px;
+    text-shadow:  0 1px 1px rgba(0, 0, 0, 0.2);   
+}
+.img_wrapper{
+    background-color: rgb(49, 49, 49);
+    overflow: hidden;
+}
+.img_wrapper img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.7;  
+}
+.about_down_section h3{
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 1px 2px rgba(0, 0, 0, 0.4);
+}
+button{
+    border: none;
+    font-family: 'Josefin Slab', serif; ;
+    background-color: #043946;
+    color: rgba(255, 255, 255, 0.876);
+    padding: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0  2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+/*--------- end about section ---------*/
+
+/********** product section ****************/
+.products_header{
+    background-color: #131313;
+}
+.products_header img{
+    width: calc(200px + (400 - 200) * ((100vw - 320px) / (1600 - 320)));   
+}
+.products_header_txt_wrapper p{
+    width: 70%;
+    font-family: "Baloo Da 2";
+    letter-spacing: 1px;
+    text-shadow:  0 1px 1px rgba(0, 0, 0, 0.2);
+    color: #dadde2aa;
+}
+.products_header_txt_wrapper h3{
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 1px 2px rgba(0, 0, 0, 0.4); 
+    color: #dadde2aa;
+}
+.product img{
+    width: calc(100px + (200 - 100) * ((100vw - 320px) / (1600 - 320)));    
+}
+.product_wrapper{
+    background-color: #ebe7de;  
+}
+.product_text_wrapper{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+.product{
+    flex-wrap: wrap;
+}
+h4{
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.products h3{
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.products p{
+    font-family: "Baloo Da 2";
+    letter-spacing: 1px;
+    text-shadow:  0 1px 1px rgba(0, 0, 0, 0.2);
+}
+/*--------- end product section ---------*/
+
+/********** contact section ****************/
+.contact{
+    background-image: url(./imgs/open2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    position: relative;  
+}
+@media(min-width: 1550px){
+    .contact{
+        background-position: 0 -224px;
+    }
+}
+.contact::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+}
+.contact_header {
+    position: relative;
+    z-index: 10;
+    color: #FFF;
+    height: 100%;
+    letter-spacing: 2px;
+    text-shadow:  0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #dadde2aa;
+    font-weight: 300;
+}
+.contact_header h3{
+    margin-bottom: 30px;
+    font-family: "Baloo Da 2";
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow:  0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #dadde2aa;
+}
+#map{
+    width: 100%;
+    height: 480px;
+    z-index: 1;
+}
+/*--------- end contact section ---------*/
+
+/********** footer ****************/
+.main_footer{
+    background-color: #043946;
+    padding: 10px;
+}
+.social i{
+    font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1600 - 320)));
+    color: #dadde2aa;
+    margin:0 10px;
+}
+.copy p{
+    margin:0 0 0 20px;
+    font-family: "Josefin Slab";
+    color: #dadde2aa;
+}
+/*--------- end footer ---------*/
+ .scroll{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #dadde2aa;
+    color: #043946 ;
+    text-shadow: 0  2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 99;
+}
+.show_scroll{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

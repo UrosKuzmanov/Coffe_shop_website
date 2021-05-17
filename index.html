@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/leaflet/leaflet.css">
+
+</head>
+</head>
+
+<body>
+    <div class="wrapper"><!--------website wrapper-------------------------------------->
+
+        <header class="header container-fluid p-3"><!--------header and nav-------------------------------------->
+            <div class="row ">
+                <div class="logo text-light col-10  col-md-4">
+                    <p class="display-6">COFFE SHOP</p>
+                </div>
+                <nav class=" nav d-none d-md-flex col-8"> 
+                    <a class="text-uppercase text-decoration-none" href="">home</a>
+                    <a class="text-uppercase text-decoration-none" href="">product</a>
+                    <a class="text-uppercase text-decoration-none" href="">about us</a>
+                    <a class="text-uppercase text-decoration-none" href="">how to finde us</a>  
+                </nav>
+            </div>
+        </header><!------------------------------------end of header and nav-------------------------------------------------------->
+
+        <div class="hamburger_menu p-0 col-2 d-md-none"><!--------hamburger popup menu icon----------------------------------------->
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <span>Close</span>      
+        </div><!----------------------------------------------------end hamburger popup menu icon----------------------------------->
+
+        <section class="menu_sidebar"><!------------------------------------sidebar popup menu-------------------------------------->
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="" class="menu_link "data-content="Home">Home</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link" data-content="Product">Product</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link" data-content="About US">About US</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link" data-content="Finde us">Finde us</a>
+                </li>  
+            </ul>
+            <div class="social_sidebar">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </section><!------------------------------------ end of sidebar popup menu------------------------------------------------>
+    
+        <section class="hero text-light"><!------------------------------------ hero section-------------------------------------->
+            <div class=" hero_content container-fluid ">
+                <div class="row vh-100 align-items-center pb-5">
+                    <header class="col-12 text-center " >
+                        <img class="hero_logo" src="./imgs/logo.png" alt="">
+                            <h1 class="display-2">THE HOME OF COFFE</h1>
+                            <P class="lead" >Lorem ipsum dolor sit amet consectetur, ea consequatur odit minus impedit!</P>
+                        
+                    </header>
+                </div>
+            </div>
+            <div class="arrow_down_wrapper">
+                <div class="arrow_down"></div>      
+            </div>
+        </section><!------------------------------------------------ end of  hero section----------------------------------------->
+
+        <section class="about_us container-fluid"><!-------------------- about_us section----------------------------------------->
+            <header class="row">
+                <div class="col-12">
+                    <div class=" about_heading row justify-content-center">
+                        <div class=" col-8 col-md-6 text-center">
+                            <h2>THE BEST COFFE SHOP</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptate architecto quos quibusdam. Consequatur sapiente quisquam, qui quo quod facilis.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class=" about_icon col-12 col-md-6 d-flex justify-content-between">
+                            <div class="text-center mx-2">
+                                <div><i class="far fa-check-circle"></i></div>
+                                <p>BEST BEANS</p>
+                            </div>
+                            <div class="text-center mx-2">
+                                <div><i class="far fa-check-circle"></i></div>
+                                <p>QUALITY MILK</p>
+                            </div>
+                            <div class="text-center mx-2">
+                                <div><i class="far fa-check-circle"></i></div>
+                                <p>PERFECT BLEND</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </header>
+
+            <div class="about_down_section row align-items-center">
+                <div class=" about_down_sec_text order-1 order-md-0 col-11 mb-3 cmb-md-0 col-md-6 mt-5 offset-1">
+                    <h3 class="text-uppercase">Fresh beans</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quidem magnam animi debitis officia illo saepe aperiam, ea ipsum libero nobis porro odit in quia, consequuntur reprehenderit ut placeat dolor.</p>
+                    <button class="">FINDE MORE</button>
+                </div>
+                <div class=" img_wrapper col-12 col-md-5 p-0">
+                    <img src="./imgs/relax.jpg" alt="">
+                </div>
+            </div>
+        </section><!------------------------------------------------------- about_us section----------------------------------------->
+
+        <section class="products container-fluid "><!------------------------------------------------------- product section----------------------------------------->
+            <header class="products_header row p-5">
+                <div class="products_header_img_wrapper col-12 col-md-6 text-center py-5">
+                    <img src="./imgs/cup_of_coffe.png" alt="">
+                </div>
+                <div class="products_header_txt_wrapper col-12 col-md-6 d-flex justify-content-around align-items-center">
+                    <div>
+                        <h3>GREAT COFFE</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Blanditiis quae tenetur maxime odit laborum, officia voluptatibus, dolorum expedita officiis, molestias natus unde dolores tempore consequuntur libero! Facilis aspernatur ea doloremque.</p>
+                        <button class="">FINDE MORE</button>
+                    </div>
+                </div>
+            </header>
+            <section class="product_wrapper row p-5 justify-content-center">
+                <header class="col-12 col-md-10 mb-5 text-center">
+                    <h3>SELECTION FROM OUR MENU</h3>
+                    <P class="my-3">Lorem ipsum dolor sit sit amet consectetur adipisicing elit amet consectetur adipisicing elit. Rem velit, quaerat eos itaque, voluptatem perferendis asperiores!</P>
+                </header>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center">
+                    <img src="./imgs/cup-6.png" alt="">
+                    <div class="product_text_wrapper ">
+                        <h4>MACCHIATO</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur voluptas.</P>
+                        <p class="h3">5€</p>
+                    </div>
+                </div>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center ">
+                    <img src="./imgs/cup-2-2.png" alt="">
+                    <div class="product_text_wrapper">
+                        <h4>ESPRESSO</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur voluptas.</P>
+                        <p class="h3">6€</p>
+                    </div>
+                </div>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center">
+                    <img src="./imgs/cup-3.png" alt="">
+                    <div class="product_text_wrapper">
+                        <h4>LATTE</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur sit amet consectetur adipisicing elit voluptas.</P>
+                        <p class="h3">7€</p>
+                    </div>
+                </div>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center">
+                    <img src="./imgs/cup-1.png" alt="">
+                    <div class="product_text_wrapper">
+                        <h4>NESS</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur sit amet consectetur adipisicing elit voluptas.</P>
+                        <p class="h3">8€</p>
+                    </div>  
+                </div>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center">
+                    <img src="./imgs/cup-5.png" alt="">
+                    <div class="product_text_wrapper">
+                        <h4>CAFÉ MOCHA</h4>
+                        <P>Lorem ipsum dolor sit amet sit amet consectetur adipisicing elit consectetur voluptas.</P>
+                        <p class="h3">4€</p>
+                    </div>
+                </div>
+                <div class="product  my-5 mx-1 col-md-3 d-flex justify-content-center">
+                    <img src="./imgs/cup-4.png" alt="">
+                    <div class="product_text_wrapper">
+                        <h4>COFFE TO GO</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur voluptas sit amet consectetur adipisicing elit.</P>
+                        <p class="h3">4€</p>
+                    </div>
+                </div> 
+            </section>
+        </section><!------------------------------------------------------- end of produts section----------------------------------------->
+
+        <section class="contact container-fluid" ><!----------------------- contact section----------------------------------------->
+            <header class=" contact_header row align-items-center">
+                <div class="col-md-6 text-center">
+                    <h3 class="text-uppercase">You are wlocome</h3>
+                    <h4>WEEKDAYS</h4>
+                    <P>8AM-02AM</P>
+                    <h4>WEEKENDS</h4>
+                    <P>8AM-02AM</P>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h3 class="text-uppercase">contact</h3>
+                    <h4>MOBILE</h4>
+                    <P>065/8898-89899</P>
+                    <h4>EMAIL</h4>
+                    <P>COFFE@GMAIL.COM</P>
+                    <h4>ADRESS</h4>
+                    <P>BUL. MIHAJLA PUPINA, NOVI SAD</P>
+
+                </div>
+            </header>
+        </section><!--------------------------------------------------------end of contact section----------------------------------------->
+
+
+        <div class="map_section" id="map"></div><!----------------------- map section----------------------------------------->
+
+        <section class="container-fluid"><!----------------------- footer----------------------------------------->
+            <footer class="main_footer row d-flex justify-content-center justify-content-md-between" >
+                <div class="copy col-12 text-center col-md-6"><p>&copy; Uros Kuzmanov 2021</p></div>
+                <div class="social text-center  col-12 col-md-6 ">
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                </div>
+            </footer>
+        </section><!-----------------------end of footer----------------------------------------->
+
+        <div   class="scroll"><i class="fas fa-arrow-up"></i></div><!----------------------- scrol button---------------------------------------->
+    
+
+   
+    
+    
+
+    </div><!----------------------- end of website wrapper----------------------------------------->
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/js.js"></script>
+</body>
+
+</html>
